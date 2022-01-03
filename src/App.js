@@ -6,7 +6,7 @@ import User from './components/User/User';
 
 function App() {
   return (
-    <div className="App" style={{height:'100vh' ,backgroundColor:'brown',color:'white' }}>
+    <div className="App" style={{height:'100%' ,backgroundColor:'brown',color:'white' }}>
       <Container maxWidth="md" style={{ display: 'flex', flexDirection: 'column' }}>
         <Header></Header>
         {/* <Welcome></Welcome> */}
