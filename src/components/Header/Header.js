@@ -7,9 +7,9 @@ const Header = () => {
     useEffect(() => {
         const fetchData = async () => {
             const d = await api.getItems();
-            console.log("data:",data[1].italian); //get 1 italian word
+            console.log("data:",data[1].italian); //get 1 italic item
             setData(d);
-            // setItWords(prevWords=>[...prevWords],data['italian']);
+            setItWords(prevWords=>[...prevWords],data['italian']);
             // console.log("italian: "+itWords);x
             
         };

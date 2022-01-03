@@ -6,11 +6,11 @@ import User from './components/User/User';
 
 function App() {
   return (
-    <div className="App" style={{height:'100%' ,backgroundColor:'brown',color:'white' }}>
-      <Container maxWidth="md" style={{ display: 'flex', flexDirection: 'column' }}>
+    <div className="App" style={{height:'100vh' ,backgroundColor:'#8D2828',color:'white' }}>
+      <Container maxWidth="md" style={{ display: 'flex', flexDirection: 'column' ,position:"relative"}}>
         <Header></Header>
         {/* <Welcome></Welcome> */}
-        <User></User>
+        <User userName="Sivan" ></User>
       </Container>
     </div>
   );

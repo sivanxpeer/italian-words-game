@@ -8,15 +8,15 @@ export default class api{
       return data
   }
 
-  static putItem = async (item) => {
-   return await baseURL.put(`/${item.id}`,item)
-  }
+  // static putItem = async (item) => {
+  //  return await baseURL.put(`/${item.id}`,item)
+  // }
 
-  static postItem = async (item) => {
-      return await baseURL.post("/",item)
-  }
+  // static postItem = async (item) => {
+  //     return await baseURL.post("/",item)
+  // }
 
-  static deleteItem = async (id) => {
-     return await baseURL.delete(id)
-  }
+  // static deleteItem = async (id) => {
+  //    return await baseURL.delete(id)
+  // }
 }

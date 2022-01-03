@@ -1,26 +1,27 @@
-import { Button, ButtonGroup } from '@mui/material'
 import React, { useEffect, useState } from 'react'
+import { Container } from '@mui/material';
+
 import './User.css'
 
-const User = () => {
+const User = (props) => {
     const [resourceType, setResourceType] = useState("dashboard")
 
     useEffect(() => { }, [resourceType])
 
     return (
-        <div className="resources" style={{ height: '100vh', width: '40%', backgroundColor: 'black', color: 'white' }}>
-            <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
-                <Button onClick={() => setResourceType('dashboard')}>{"dashboard"}</Button>
-                <Button onClick={() => setResourceType('leadership')}>{"Leadership"}</Button>
-                <Button onClick={() => setResourceType('xp')}>{"XP"}</Button>
-            </ButtonGroup>
-            {/* <button className="dashboard" onClick={() => setResourceType('dashboard')}>{"dashboard"}</button> */}
-            {/* <button onClick={() => setResourceType('leadership')}>{"Leadership"}</button> */}
-            {/* <button onClick={() => setResourceType('xp')}>{"XP"}</button> */}
+            <div className= "dash">
+        <div className="resources">
+            <div className="user-name">Hello, {props.userName}</div>
+            <div className="buttons">
+                <button className="btn dashborad" onClick={() => setResourceType('dashboard')}>{"dashboard"}</button>
+                <button className="btn leadership" onClick={() => setResourceType('leadership')}>{"Leadership"}</button>
+                <button className="btn xp"onClick={() => setResourceType('xp')}>{"XP"}</button>
+            </div>
             <h1>
                 {resourceType}
             </h1>
         </div>
+            </div>
     )
 }
 
