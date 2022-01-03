@@ -66,3 +66,27 @@
 .btn:hover {
   border: 1px solid black;
 }
+
+
+@media screen 
+  and (min-device-width: 400px) 
+  and (max-device-width: 700px) 
+  { 
+
+    .dash {
+      /* position: absolute; */
+      border: 1px solid white;
+      /* width: 20em; */
+      /* height: 20em; */
+      /* padding: 5%; */
+      /* margin: auto; */
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      /* right: 0; */
+      /* top: 80%; */
+    }
+    
+
+  }

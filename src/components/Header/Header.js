@@ -3,14 +3,17 @@ import './Header.css'
 import api from '../../Api'
 const Header = () => {
     const [data, setData] = useState();
-    const [itWords, setItWords] = useState([]);
+    const [italianWords, setItalianWords] = useState();
     useEffect(() => {
         const fetchData = async () => {
             const d = await api.getItems();
-            console.log("data:",data[1].italian); //get 1 italic item
+            let it = [];
             setData(d);
-            setItWords(prevWords=>[...prevWords],data['italian']);
-            // console.log("italian: "+itWords);x
+            d.forEach((item) => {
+                it.push(item.italian)
+                setItalianWords(item.italian);
+            })
+            console.log("it",it);
             
         };
         
@@ -33,7 +36,7 @@ const Header = () => {
             <span className="title">BiLinguale 🌏</span>
             {/* <button onClick={()=>displayWords(data.italian)}>get italian words</button> */}
             <div>
-                
+
             </div>
             {/* <div>{()=>displayWords()}</div> */}
             {/* <div className="inputs"></div> */}
