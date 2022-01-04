@@ -7,7 +7,12 @@
     flex-wrap: wrap;
     width:100%;
 }
-
+.glob{
+    opacity: 0.3;
+}
+.glob:hover{
+    opacity: 0.4;
+}
 .title{
   color: white;
     margin: auto auto;

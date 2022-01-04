@@ -1,5 +1,5 @@
 import './App.css';
-import { Container } from '@mui/material';
+// import { Container } from '@mui/material';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
 // import Welcome from './components/Welcome/Welcome';
@@ -8,7 +8,6 @@ import User from './components/User/User';
 import GameCard from './components/GameCard/GameCard';
 import NotFound from "./components/NotFound";
 import { useRef,useEffect } from 'react';
-import GoogleLogin from 'react-google-login';
 
 
 function App() {
@@ -38,10 +37,7 @@ useEffect(()=>{
 //         console.log(visibility);
 //     }
 // }
-  const responseGoogle=(response)=>{
-     console.log(response);
-     console.log(response.profileObj);
-  }
+ 
   return (
     <div className="App" >
       <BrowserRouter>
@@ -77,16 +73,7 @@ useEffect(()=>{
       {/* <GameCard /> */}
       {/* <User userName="Sivan" ></User> */}
       {/* </Container> */}
-      <Container maxWidth="sm" className="login-container">
-            <GoogleLogin className="login"
-            clientId="910294832444-nah1pvsh5jj8q9saocioacufr61c6out.apps.googleusercontent.com"
-            buttonText="Login"
-            onSuccess={responseGoogle}
-            onFailure={responseGoogle}
-            cookiePolicy={'single_host_origin'}
-
-            ></GoogleLogin>
-      </Container>
+      
 
     </div>
   );

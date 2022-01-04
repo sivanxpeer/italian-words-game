@@ -1,5 +1,6 @@
 body{
     overflow-x: hidden;
+    font-family: "Montserrat";
 }
 
 .navbar-container{
@@ -17,12 +18,12 @@ body{
 }
 
 
-@supports(backdrop-filter: blur(1rem)){
+/* @supports(backdrop-filter: blur(1rem)){
     .navbar-container{
     background:(0% 0% 100%/0.1);
     backdrop-filter:blur(1rem);
     }
-}
+} */
 
 .link{
     padding: 2%;
@@ -44,11 +45,11 @@ body{
 
 .globus{
     text-decoration: none;
+    list-style: none;
     flex: 2;
     justify-self: flex-start;
     margin-left: 2em;
-    margin-top: 1rem;
-
+    margin-top: 1.3rem;
     /* align-self: flex-start; */
 }
 .bi,.learn{
@@ -62,7 +63,13 @@ body{
 
 }
 
-
+.login{
+    /* width:2px; */
+    /* padding:10%; */
+    /* flex:0.4; */
+    opacity: 0.4;
+    margin:0.8rem 1rem 0 0;
+}
 
 /* mobile */
 /* @media (max-width: 35em){ */
