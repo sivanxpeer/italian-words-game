@@ -1,5 +1,5 @@
 import './App.css';
-// import { Container } from '@mui/material';
+import { Container } from '@mui/material';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
 // import Welcome from './components/Welcome/Welcome';
@@ -7,13 +7,15 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import User from './components/User/User';
 import GameCard from './components/GameCard/GameCard';
 import NotFound from "./components/NotFound";
-// import { createRef } from 'react';
+import { useRef,useEffect } from 'react';
 import GoogleLogin from 'react-google-login';
 
 
 function App() {
-
-
+ const ref= useRef("primary-nav");
+useEffect(()=>{
+  ref.current="nav-toggle";
+})
   ///check how to convert using REF
 // const primaryNav=document.querySelector(".navbar-container");
 // const navToggle=document.querySelector(".mobile-nav-toggle");
@@ -75,6 +77,7 @@ function App() {
       {/* <GameCard /> */}
       {/* <User userName="Sivan" ></User> */}
       {/* </Container> */}
+      <Container maxWidth="sm" className="login-container">
             <GoogleLogin className="login"
             clientId="910294832444-nah1pvsh5jj8q9saocioacufr61c6out.apps.googleusercontent.com"
             buttonText="Login"
@@ -83,6 +86,7 @@ function App() {
             cookiePolicy={'single_host_origin'}
 
             ></GoogleLogin>
+      </Container>
 
     </div>
   );

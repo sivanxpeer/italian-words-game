@@ -1,5 +1,6 @@
 .App {
   height: 100vh;
+  min-width: 260px;
   background-color: #212121;
   color: white;
 }
@@ -13,20 +14,33 @@
   clip: rect(0,0,0,0);
   border: 0;
 }
-.login{
-  position: absolute;
-  top:20rem;
-  left:37rem;
-  /* display: flex; */
-  justify-self: center;
+.login-container{
+  display: flex;
+  justify-content: center;
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.login{
+  /* position: absolute; */
+  /* top:20rem; */
+  /* left:37rem; */
+  /* display: flex; */
+}
+@media (max-width: 35em){
+  .login-container{
+    display: flex;
+  justify-content: center;
+  }
+}
+/* @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .App {
       display: flex;
       align-items:flex-start;
       justify-content: center;
     }
-
+.login-container{
+  display: flex;
+  align-items:center;
+  justify-content: flex;
+}
 .User{
     position: relative;
     margin: auto;
@@ -36,4 +50,4 @@
 
 
 }
-    
+     */
