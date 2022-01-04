@@ -52,7 +52,7 @@ const Header = () => {
             <div className="img-container">
                 {/* <img className="main-img" src={"https://images.unsplash.com/photo-1597392582469-a697322d5c16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"}></img> */}
             </div>
-            <button onClick={handleClick}>get italian words</button>
+            <button className="btn get-words"onClick={handleClick}>get italian words</button>
             <div >
                 {/* <button>Get italian words</button> */}
 

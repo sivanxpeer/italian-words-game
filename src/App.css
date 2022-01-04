@@ -1,9 +1,25 @@
 .App {
   height: 100vh;
-  background-color: #8d2828;
-  color: "white";
+  background-color: #212121;
+  color: white;
 }
-
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+.login{
+  position: absolute;
+  top:20rem;
+  left:37rem;
+  /* display: flex; */
+  justify-self: center;
+}
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .App {
       display: flex;

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 
 .dash {
-  position: absolute;
+  /* position: absolute; */
   border: 1px solid white;
   width: 20em;
   height: 20em;
@@ -11,7 +11,7 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-  right: 0;
+  /* right: 0; */
   top: 80%;
 }
 

@@ -1,5 +1,20 @@
-.answers{
+.it-words{
+    margin-top:12em;
     display:flex;
     flex-direction:column;
     justify-content:center;
+    align-items: center;
+
+}
+.question{
+    border: 1px solid blue;
+    height:10em;
+
+}
+.answers{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items: center;
+    align-content: center;
 }
