@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './Header.css'
-import api from '../../Api'
+// import api from '../../Api'
 const Header = () => {
 
     return (
