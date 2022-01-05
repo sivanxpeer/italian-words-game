@@ -1,4 +1,4 @@
-.it-words{
+.en-words{
     margin-top:12em;
     display:flex;
     flex-direction:column;
@@ -8,7 +8,8 @@
 }
 .question{
     border: 1px solid blue;
-    height:10em;
+    height:5em;
+    padding:0 5em;
 
 }
 .answers{

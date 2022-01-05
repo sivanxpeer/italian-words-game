@@ -4,10 +4,14 @@
     justify-content:space-evenly;
     flex-direction:column;
     height:35vh;
-    flex-wrap: wrap;
+    margin-top: 18vh;
+    /* flex-wrap: wrap; */
     width:100%;
 }
-
+.start{
+    margin-top:3em;
+    height:1rem;        
+}
 .glob{
     opacity: 0.3;
 }

@@ -9,6 +9,11 @@ const NavBar = () => {
         console.log(response);
         console.log(response.profileObj);
     }
+    const responseGoogle2 = (response) => {
+        // console.log(response);
+        console.log(response.profileObj.name);
+        return (response.profileObj.name);
+    }
     return (
         <nav id="navbar-container" data-visible="false" className="navbar-container">
             <Link to="/" className="globus">🌏 <span className="link bi">BiLinguale</span></Link>
@@ -18,11 +23,12 @@ const NavBar = () => {
             <GoogleLogin className="login link"
                 clientId="910294832444-nah1pvsh5jj8q9saocioacufr61c6out.apps.googleusercontent.com"
                 buttonText="Login"
+                name={responseGoogle2}
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
                 cookiePolicy={'single_host_origin'}
-            ></GoogleLogin>
-            
+                >
+            </GoogleLogin>
         </nav>
     );
 };

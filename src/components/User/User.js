@@ -3,15 +3,16 @@ import React, { useEffect, useState } from 'react'
 
 import './User.css'
 
-const User = (props) => {
-    const [resourceType, setResourceType] = useState("dashboard")
+const User = ({userName}) => {
 
-    useEffect(() => { }, [resourceType])
+    const [resourceType, setResourceType] = useState("dashboard")
+    useEffect(() => { 
+    }, [resourceType])
 
     return (
         <div className="dash">
             <div className="resources">
-                <div className="user-name">Hello, {props.userName}</div>
+            <div className="user-name">{`Hello, ${userName}`}</div>
                 <div className="buttons">
                     <button className="btn dashborad" onClick={() => setResourceType('dashboard')}>{"dashboard"}</button>
                     <button className="btn leadership" onClick={() => setResourceType('leadership')}>{"Leadership"}</button>

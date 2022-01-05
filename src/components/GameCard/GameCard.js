@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import "./GameCard.css"
 import api from '../../Api'
+import GameList from '../GameList/GameList';
 
-const GameCard = (props) => {
+const GameCard = ({ question }) => {
     const [data, setData] = useState();
     const [italianWords, setItalianWords] = useState();
     const [flag, setFlag] = useState(false);
@@ -17,7 +18,6 @@ const GameCard = (props) => {
             dataObj.forEach((item) => {
                 it.push(item.italian)
 
-                // setItalianWords((prevItem)=>{console.log(prevItem)});
             })
             setItalianWords(it);
             console.log("it", it);
@@ -37,27 +37,30 @@ const GameCard = (props) => {
     }
     return (
         <div className="header" data={data}>
+            <GameList></GameList>
             <button className="btn get-words" onClick={handleClick}>get italian words</button>
             <div>
                 {flag && displayWords()}
 
             </div>
-            <div className="question" q={props.question}></div>
-            <div className="it-words"></div>
-            <div className="answers">
-                <div>
-                    <input type="radio" name="answer" /><label>1</label>
+            <div className="card">
+                <div className="question"></div>
+                <div className="en-words"></div>
+                <div className="answers">
+                    <div>
+                        <input type="radio" name="answer" /><label>1</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="answer" /><label>1</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="answer" /><label>1</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="answer" /><label>1</label>
+                    </div>
+                    <button className="btn">Check</button>
                 </div>
-                <div>
-                    <input type="radio" name="answer" /><label>1</label>
-                </div>
-                <div>
-                    <input type="radio" name="answer" /><label>1</label>
-                </div>
-                <div>
-                    <input type="radio" name="answer" /><label>1</label>
-                </div>
-                <button className="btn">Check</button>
             </div>
         </div>
     )
