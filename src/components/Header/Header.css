@@ -7,6 +7,7 @@
     flex-wrap: wrap;
     width:100%;
 }
+
 .glob{
     opacity: 0.3;
 }
@@ -20,7 +21,8 @@
     text-transform: Uppercase;
     font-family: 'Montserrat' ,sans-serif;
     z-index:100;
-    /* background:url("https://images.unsplash.com/photo-1461958508236-9a742665a0d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")no-repeat center center/cover; */
+    
+    /* background:url("https://static.vecteezy.com/system/resources/previews/001/197/966/non_2x/earth-png.png")no-repeat center center/cover; */
 }
 
 .get-words{
@@ -30,4 +32,11 @@
 .main-img{
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 32em){
+   .title{
+
+       font-size: 12vw;
+   } 
 }

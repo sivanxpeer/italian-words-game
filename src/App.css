@@ -1,9 +1,12 @@
 .App {
   height: 100vh;
-  min-width: 260px;
+  min-width: 400px;
+  min-height: 600px;
   background-color: #212121;
   color: white;
+
 }
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -18,12 +21,7 @@
   display: flex;
   justify-content: center;
 }
-.login{
-  /* position: absolute; */
-  /* top:20rem; */
-  /* left:37rem; */
-  /* display: flex; */
-}
+
 @media (max-width: 35em){
   .login-container{
     display: flex;

@@ -40,6 +40,7 @@ useEffect(()=>{
  
   return (
     <div className="App" >
+      {/* <div className="image-glob" /> */}
       <BrowserRouter>
       {/* this is for mobile */}
         {/* <button className="mobile-nav-toggle"  */}
@@ -55,13 +56,14 @@ useEffect(()=>{
           </Route>
           <Route path="/gamecard" exact component={GameCard} />
           {/* {data && (
-              <ManageCards
-                allData={data}
-                deleteCard={deleteCard}
-                updateItem={updateItem}
-                newItem={newItem}
-              />
-            )} */}
+            <ManageCards
+            allData={data}
+            deleteCard={deleteCard}
+            updateItem={updateItem}
+            newItem={newItem}
+            />
+          )} */}
+          {/* <img className="image-glob" src="https://static.vecteezy.com/system/resources/previews/001/197/966/non_2x/earth-png.png"/> */}
           {/* </Route> */}
           <Route path="/user" exact component={User} />
           <Route component={NotFound} />
