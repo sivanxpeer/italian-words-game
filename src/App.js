@@ -1,3 +1,4 @@
+import {useState}from 'react'
 import './App.css';
 // import { Container } from '@mui/material';
 import Header from './components/Header/Header';
@@ -11,36 +12,11 @@ import { useRef,useEffect } from 'react';
 
 
 function App() {
- const ref= useRef("primary-nav");
-useEffect(()=>{
-  ref.current="nav-toggle";
-})
-  ///check how to convert using REF
-// const primaryNav=document.querySelector(".navbar-container");
-// const navToggle=document.querySelector(".mobile-nav-toggle");
+const [scores,setScores]=useState()
 
-
-// const handleClick =()=>{
-//     // if(e.nativeEvent.target.includes("clicked"))
-//     // if
-//     // this.props.clicked = true
-//     // console.log(e.nativeEvent.target)
-//     const visibility = primaryNav.getAttribute("data-visible");
-//     if(visibility==="false"){
-//         primaryNav.setAttribute("data-visible",true);
-//         navToggle.setAttribute("aria-expanded", true)
-//         // console.log(visibility);
-//       }
-//       else{
-//         primaryNav.setAttribute("data-visible",false);
-//         navToggle.setAttribute("aria-expanded", false)
-//         console.log(visibility);
-//     }
-// }
- 
   return (
     <div className="App" >
-      {/* <div className="image-glob" /> */}
+  
       <BrowserRouter>
       {/* this is for mobile */}
         {/* <button className="mobile-nav-toggle"  */}
@@ -54,7 +30,9 @@ useEffect(()=>{
           <Route path="/" exact component={Header}>
             {/* {data && <CardList allData={data} />} */}
           </Route>
-          <Route path="/gamecard" exact component={GameCard} />
+          <Route path="/gamecard" exact >
+            <GameCard setScores={setScores}/>
+          </Route>
           {/* {data && (
             <ManageCards
             allData={data}

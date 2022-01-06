@@ -1,6 +1,6 @@
 // import React, { useState } from 'react';
 // import axios from "axios";
-// //this is the api for translating 
+// //this is the api for translating    --> got blocked moved to mock api creating my own data
 
 
 // const WordsData = () => {

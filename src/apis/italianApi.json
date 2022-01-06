@@ -1,0 +1,281 @@
+[
+    {
+        "english": "father",
+        "italian": "padre",
+        "category": "family",
+        "id": "1",
+        "wrongWords": ["mother", "bread", "emotions"]
+    },
+    {
+        "english": "mother",
+        "italian": "madre",
+        "category": "family",
+        "id": "2",
+        "wrongWords": ["boy", "pasta", "sad"]
+    },
+    {
+        "english": "sister",
+        "italian": "sorella",
+        "category": "family",
+        "id": "3",
+        "wrongWords": ["glass", "tree", "red"]
+    },
+    {
+        "english": "brother",
+        "italian": "fratello",
+        "category": "family",
+        "id": "4",
+        "wrongWords": ["food", "yellow", "butterfly"]
+    },
+    {
+        "english": "grandmother",
+        "italian": "nonna",
+        "category": "family",
+        "id": "5",
+        "wrongWords": ["girl", "bicycle", "brother"]
+    },
+    {
+        "english": "family",
+        "italian": "famiglia",
+        "category": "family",
+        "id": "6",
+        "wrongWords": ["cousin", "fiancé", "sandwich"]
+    },
+    {
+        "english": "grandfather",
+        "italian": "nonno",
+        "category": "family",
+        "id": "7",
+        "wrongWords": ["uncle", "chef", "window"]
+    },
+    {
+        "english": "cousin",
+        "italian": "cugino",
+        "category": "family",
+        "id": "8",
+        "wrongWords": ["tree", "food", "red"]
+    },
+    {
+        "english": "fiancé",
+        "italian": "fidanzato",
+        "category": "family",
+        "id": "9",
+        "wrongWords": ["bicycle", "sad", "father"]
+    },
+    {
+        "english": "uncle",
+        "italian": "dio",
+        "category": "family",
+        "id": "10",
+        "wrongWords": ["yellow", "bus", "boy"]
+    },
+    {
+        "english": "coffee",
+        "italian": "caffè",
+        "category": "kitchen",
+        "id": "11",
+        "wrongWords": ["girl", "food", "dough"]
+    },
+    {
+        "english": "sandwich",
+        "italian": "panino",
+        "category": "kitchen",
+        "id": "12",
+        "wrongWords": ["black", "bread", "grandmother"]
+    },
+    {
+        "english": "bread",
+        "italian": "pane",
+        "category": "kitchen",
+        "id": "13",
+        "wrongWords": ["glass", "window", "laugh"]
+    },
+    {
+        "english": "dough",
+        "italian": "pasta",
+        "category": "kitchen",
+        "id": "14",
+        "wrongWords": ["happy", "father", "black"]
+    },
+    {
+        "english": "glass",
+        "italian": "bicchiere",
+        "category": "kitchen",
+        "id": "15",
+        "wrongWords": ["bus", "sad", "free"]
+    },
+    {
+        "english": "food",
+        "italian": "cibo",
+        "category": "kitchen",
+        "id": "16",
+        "wrongWords": ["kitchen", "hunger", "yellow"]
+    },
+    {
+        "english": "fork",
+        "italian": "forchetta",
+        "category": "kitchen",
+        "id": "17",
+        "wrongWords": ["boy", "happy", "black"]
+    },
+    {
+        "english": "kitchen",
+        "italian": "cucina",
+        "category": "kitchen",
+        "id": "18",
+        "wrongWords": ["chef", "father", "tired"]
+    },
+    {
+        "english": "chef",
+        "italian": "cuoco",
+        "category": "kitchen",
+        "id": "19",
+        "wrongWords": ["fun", "window", "coffee"]
+    },
+    {
+        "english": "cup",
+        "italian": "tazza",
+        "category": "kitchen",
+        "id": "20",
+        "wrongWords": ["mother", "bus", "free"]
+    },
+    {
+        "english": "boy",
+        "italian": "ragazzo",
+        "category": "basics",
+        "id": "21",
+        "wrongWords": ["sad", "happy", "granfather"]
+    },
+    {
+        "english": "window",
+        "italian": "finestra",
+        "category": "basics",
+        "id": "22",
+        "wrongWords": ["red", "cup", "fork"]
+    },
+    {
+        "english": "bus",
+        "italian": "autobus",
+        "category": "basics",
+        "id": "23",
+        "wrongWords": ["happy", "girl", "window"]
+    },
+    {
+        "english": "tree",
+        "italian": "albero",
+        "category": "basics",
+        "id": "24",
+        "wrongWords": ["hunger", "free", "love"]
+    },
+    {
+        "english": "red",
+        "italian": "rosso",
+        "category": "basics",
+        "id": "25",
+        "wrongWords": ["fun", "bus", "tree"]
+    },
+    {
+        "english": "butterfly",
+        "italian": "farfalla",
+        "category": "basics",
+        "id": "26",
+        "wrongWords": ["cry", "laugh", "yellow"]
+    },
+    {
+        "english": "yellow",
+        "italian": "giallo",
+        "category": "basics",
+        "id": "27",
+        "wrongWords": ["family", "chef", "bycicle"]
+    },
+    {
+        "english": "bicycle",
+        "italian": "bicicletta",
+        "category": "basics",
+        "id": "28",
+        "wrongWords": ["food", "fork", "butterfly"]
+    },
+    {
+        "english": "girl",
+        "italian": "ragazza",
+        "category": "basics",
+        "id": "29",
+        "wrongWords": ["fiancé", "black", "woman"]
+    },
+    {
+        "english": "black",
+        "italian": "nero",
+        "category": "basics",
+        "id": "30",
+        "wrongWords": ["grandmother", "red", "mother"]
+    },
+    {
+        "english": "love",
+        "italian": "amore",
+        "category": "emotions",
+        "id": "31",
+        "wrongWords": ["cry", "food", "coffee"]
+    },
+    {
+        "english": "tired",
+        "italian": "stanco",
+        "category": "emotions",
+        "id": "32",
+        "wrongWords": ["grandmother", "red", "tree"]
+    },
+    {
+        "english": "happy",
+        "italian": "contento",
+        "category": "emotions",
+        "id": "33",
+        "wrongWords": ["glass", "bus", "fork"]
+    },
+    {
+        "english": "sad",
+        "italian": "triste",
+        "category": "emotions",
+        "id": "34",
+        "wrongWords": ["love", "black", "girl"]
+    },
+    {
+        "english": "fun",
+        "italian": "divertente",
+        "category": "emotions",
+        "id": "35",
+        "wrongWords": ["window", "father", "cousin"]
+    },
+    {
+        "english": "free",
+        "italian": "libero",
+        "category": "emotions",
+        "id": "36",
+        "wrongWords": ["bread", "love", "cup"]
+    },
+    {
+        "english": "cry",
+        "italian": "piangere",
+        "category": "emotions",
+        "id": "37",
+        "wrongWords": ["fork", "black", "happy"]
+    },
+    {
+        "english": "laugh",
+        "italian": "ridere",
+        "category": "emotions",
+        "id": "38",
+        "wrongWords": ["food", "kitchen", "cry"]
+    },
+    {
+        "english": "hunger",
+        "italian": "fame",
+        "category": "emotions",
+        "id": "39",
+        "wrongWords": ["emotions", "yellow", "glass"]
+    },
+    {
+        "english": "emotions",
+        "italian": "emozioni",
+        "category": "emotions",
+        "id": "40",
+        "wrongWords": ["uncle", "brother", "sad"]
+    }]

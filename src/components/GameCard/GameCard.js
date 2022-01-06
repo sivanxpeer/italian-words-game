@@ -3,65 +3,48 @@ import "./GameCard.css"
 import api from '../../Api'
 import GameList from '../GameList/GameList';
 
-const GameCard = ({ question }) => {
+const GameCard = ({ scores, setScores }) => {
     const [data, setData] = useState();
-    const [italianWords, setItalianWords] = useState();
-    const [flag, setFlag] = useState(false);
+    const [category, setCategory] = useState(null);//return to null as initial
+    const [doneCategory, setDoneCategory] = useState([])
+    const [isPlaying, setIsPlaying] = useState(true)
 
     useEffect(() => {
         let it = [];
         const fetchData = async () => {
             const dataObj = await api.getItems();
             setData(dataObj);
-
-            console.log(dataObj);
-            dataObj.forEach((item) => {
-                it.push(item.italian)
-
-            })
-            setItalianWords(it);
-            console.log("it", it);
-
         };
 
         fetchData();
     }, []);
-
-    function displayWords() {
-        return italianWords.map((word) => { return (<span key={word}>{word}</span>) })
+    const gameEnd = () => {
+        return <><h1> {`Woow you finished in the score of ${scores + 1}/10`}</h1>
+            <button>Play Again</button></>
     }
 
-    const handleClick = () => {
-        // setFlag(true);
-        setFlag(prevState => !prevState);
-    }
+    // game list get the props ↓
+    // qArr, category,  setDoneCategory 
+
+    //1. create button for each category of Q + nice title + CSS 
     return (
-        <div className="header" data={data}>
-            <GameList></GameList>
-            <button className="btn get-words" onClick={handleClick}>get italian words</button>
-            <div>
-                {flag && displayWords()}
+        <div className="header" >
+            {isPlaying && category && data && <GameList
+                questionArr={data}
+                category={category}
+                setDoneCategory={setDoneCategory}
+                isPlaying={isPlaying}
+                setIsPlaying={setIsPlaying}
+                setScores={setScores}
+            />}
 
-            </div>
-            <div className="card">
-                <div className="question"></div>
-                <div className="en-words"></div>
-                <div className="answers">
-                    <div>
-                        <input type="radio" name="answer" /><label>1</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="answer" /><label>1</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="answer" /><label>1</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="answer" /><label>1</label>
-                    </div>
-                    <button className="btn">Check</button>
-                </div>
-            </div>
+            {isPlaying && !category && <div className="categories">
+                <div onClick={(e) => setCategory(e.target.textContent.toLowerCase())} className="category btn">Basics</div>
+                <div onClick={(e) => setCategory(e.target.textContent.toLowerCase())} className="category btn">Family</div>
+                <div onClick={(e) => setCategory(e.target.textContent.toLowerCase())} className="category btn">kitchen</div>
+                <div onClick={(e) => setCategory(e.target.textContent.toLowerCase())} className="category btn">Emotions</div>
+            </div>}
+            {!isPlaying && gameEnd()}
         </div>
     )
 }
