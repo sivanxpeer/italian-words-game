@@ -1,3 +1,8 @@
+body{
+    height:100%;
+    background-color: #212121;
+
+}
 .question {
     display: flex;
     flex-direction: column;
@@ -7,6 +12,7 @@
     border: 3px solid #d9dd6ba8;
     justify-content: space-between;
     padding: 5rem;
+    margin:2rem 5rem
   }
   
   .q {
@@ -47,5 +53,5 @@
   .q-title {
     text-align: center;
     padding: 1rem;
-    font-size: 4rem;
+    font-size:8vw;
   }

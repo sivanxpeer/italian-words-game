@@ -11,6 +11,7 @@ const GameCard = ({ scores, setScores }) => {
     useEffect(() => {
         let it = [];
         const fetchData = async () => {
+            console.log(it);
             const dataObj = await api.getItems();
             setData(dataObj);
         };
@@ -18,10 +19,10 @@ const GameCard = ({ scores, setScores }) => {
     }, []);
     const gameEnd = () => {
         return (
-            <>
-                <h1> {`Woow you finished in the score of ${scores + 1}/10`}</h1>
-                <button onClick={() => setIsPlaying(true)}>Play Again</button>
-            </>
+            <div className="end-round">
+                <h1 className="end-round-title"> {`Wooohooo round finished with the score of ${scores + 1}/10`}</h1>
+                <button className="btn"onClick={() => setIsPlaying(true)}>Play Again</button>
+            </div>
         );
     };
     const insertCatButtons = () => {

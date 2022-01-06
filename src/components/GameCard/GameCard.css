@@ -17,38 +17,58 @@
   align-content: center;
 }
 .categories {
-    border:1px solid red;
-    /* height: */
-    padding:12em;
+  padding: 12em;
   display: flex;
   justify-content: space-around;
-align-content: center;
+  align-content: center;
   /* margin: auto; */
   /* align-items:space-around; */
 }
 
 .category {
-    color:black;
+  color: black;
   margin-left: 1em;
+  padding: 1em;
   /* background-color:#d9dd6b; */
 }
 
-.game-list{
-    display: flex;
-    justify-content: center;
+.game-list {
+  display: flex;
+  justify-content: center;
 }
 
-.not-active-button{
-    background-color: grey;
+.not-active-button {
+  background-color: grey;
+}
+.end-round-title {
+  justify-self: center;
+  margin: auto;
+}
+.end-round {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
 @media (max-width: 500px) {
   .categories {
     display: flex;
     flex-direction: column;
-}
-.category{
-    margin:1em;
-    padding:1em;
+    padding: 4em;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .category {
+    margin: 1em;
+    padding: 1em 3em;
+  }
+  .end-round-title {
+    width: 99%;
+    margin: auto;
+    /* margin-left:3em; */
   }
 }

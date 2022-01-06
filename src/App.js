@@ -8,7 +8,7 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import User from './components/User/User';
 import GameCard from './components/GameCard/GameCard';
 import NotFound from "./components/NotFound";
-import { useRef, useEffect } from 'react';
+// import { useRef, useEffect } from 'react';
 
 
 function App() {
