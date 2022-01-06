@@ -12,7 +12,7 @@ const User = ({userName}) => {
     return (
         <div className="dash">
             <div className="resources">
-            <div className="user-name">{`Hello, ${userName}`}</div>
+            <div className="user-name">{`User`}</div>
                 <div className="buttons">
                     <button className="btn dashborad" onClick={() => setResourceType('dashboard')}>{"dashboard"}</button>
                     <button className="btn leadership" onClick={() => setResourceType('leadership')}>{"Leadership"}</button>
