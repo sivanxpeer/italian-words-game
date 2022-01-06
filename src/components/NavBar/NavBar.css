@@ -17,7 +17,12 @@ body{
     border-bottom: solid 2px rgba(238, 238, 238, 0.425);
 }
 
-
+.nav-signout {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
 /* @supports(backdrop-filter: blur(1rem)){
     .navbar-container{
     background:(0% 0% 100%/0.1);

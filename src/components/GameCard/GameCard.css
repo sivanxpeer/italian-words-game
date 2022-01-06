@@ -24,8 +24,13 @@
 }
 
 .category {
+    color:black;
   margin-left: 1em;
   /* background-color:#d9dd6b; */
+}
+
+.not-active-button{
+    background-color: grey;
 }
 
 @media (max-width: 500px) {

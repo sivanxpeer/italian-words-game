@@ -1,4 +1,4 @@
-import {useState}from 'react'
+import { useState } from 'react'
 import './App.css';
 // import { Container } from '@mui/material';
 import Header from './components/Header/Header';
@@ -8,30 +8,33 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import User from './components/User/User';
 import GameCard from './components/GameCard/GameCard';
 import NotFound from "./components/NotFound";
-import { useRef,useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 
 function App() {
-const [scores,setScores]=useState()
-
+  const [scores, setScores] = useState()
+  const [myUser, setMyUser] = useState(null);
   return (
     <div className="App" >
-  
+
       <BrowserRouter>
-      {/* this is for mobile */}
+        {/* this is for mobile */}
         {/* <button className="mobile-nav-toggle"  */}
-          {/* clicked={"false"} */}
-          {/* // aria-controls="navbar-container" aria-expanded="false" */}
-            {/* // onClick={handleClick}> */}
-          {/* <span className="sr-only">Menu</span> */}
+        {/* clicked={"false"} */}
+        {/* // aria-controls="navbar-container" aria-expanded="false" */}
+        {/* // onClick={handleClick}> */}
+        {/* <span className="sr-only">Menu</span> */}
         {/* </button> */}
-        <NavBar />
+        <NavBar setMyUser={setMyUser} myUser={myUser} />
+
         <Switch>
           <Route path="/" exact component={Header}>
             {/* {data && <CardList allData={data} />} */}
           </Route>
+
           <Route path="/gamecard" exact >
-            <GameCard setScores={setScores}/>
+            <GameCard setScores={setScores} scores={scores} />
+            {/* <GameCard setScores={setScores}/> */}
           </Route>
           {/* {data && (
             <ManageCards
@@ -53,7 +56,7 @@ const [scores,setScores]=useState()
       {/* <GameCard /> */}
       {/* <User userName="Sivan" ></User> */}
       {/* </Container> */}
-      
+
 
     </div>
   );
