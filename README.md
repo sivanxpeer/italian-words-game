@@ -1,5 +1,5 @@
-## mid-project 
+### mid-project 
 
-## learn basic italian
+#### learn basic italian
 
 ## https://bilinguale.netlify.app/
