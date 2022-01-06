@@ -59,7 +59,7 @@ const Question = ({ qArr, indexOfCurQ, indexLogic, numOfRightQ }) => {
         return suffeledArrOfAnswers.map((e) => e);
     };
     return (
-        <>
+        <><div className="container-q">
             <div className="q-title">Choose Your Answer</div>
             <div className="question">
                 <div className="q-score">{`${indexOfCurQ + 1} / 10`}</div>
@@ -68,6 +68,7 @@ const Question = ({ qArr, indexOfCurQ, indexLogic, numOfRightQ }) => {
                     <div className="q-options"> {inesrtAnswers()}</div>
                 </div>
             </div>
+        </div>
         </>
     );
 };
