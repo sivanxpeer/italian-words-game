@@ -57,7 +57,7 @@
   .categories {
     display: flex;
     flex-direction: column;
-    padding: 4em;
+    /* padding: 4em; */
     justify-content: center;
     align-items: center;
     align-content: center;

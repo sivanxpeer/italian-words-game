@@ -16,13 +16,13 @@ body{
   }
   
   .q {
-    /* display: flex; */
+    display: flex;
   
-    /* border: 1px solid #d9dd6b; */
+    border: 1px solid #d9dd6b;
     /* height: 400px; */
-    /* align-content: center; */
-    /* margin-bottom: 1em; */
-    /* border-radius: 1em; */
+    align-content: center;
+    margin-bottom: 1em;
+    border-radius: 1em;
   }
   .q-score {
     font-size: 2rem;
