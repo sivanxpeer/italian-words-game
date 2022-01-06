@@ -45,9 +45,9 @@ const GameCard = ({ scores, setScores }) => {
     // qArr, category,  setDoneCategory
     //1. create button for each category of Q + nice title + CSS
     return (
-        <div className="header">
+        <div>
             {isPlaying && category && data && (
-                <GameList
+                <GameList className={"game-list"}
                     questionArr={data}
                     category={category}
                     setDoneCategory={setDoneCategory}

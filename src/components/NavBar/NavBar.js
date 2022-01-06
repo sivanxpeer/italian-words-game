@@ -42,10 +42,10 @@ const NavBar = ({ setMyUser, myUser }) => {
                     <Link to="/user" className="link user">
                         User Profile
                     </Link>
-                    <GoogleLogout
+                    <GoogleLogout 
                         render={(renderProps) => (
-                            <button
-                                className="nav-signout"
+                            <button 
+                                className="nav-signout link"
                                 onClick={renderProps.onClick}
                                 disabled={renderProps.disabled}
                             >

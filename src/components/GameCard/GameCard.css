@@ -17,8 +17,12 @@
   align-content: center;
 }
 .categories {
+    border:1px solid red;
+    /* height: */
+    padding:12em;
   display: flex;
   justify-content: space-around;
+align-content: center;
   /* margin: auto; */
   /* align-items:space-around; */
 }
@@ -27,6 +31,11 @@
     color:black;
   margin-left: 1em;
   /* background-color:#d9dd6b; */
+}
+
+.game-list{
+    display: flex;
+    justify-content: center;
 }
 
 .not-active-button{

@@ -6,7 +6,6 @@
   color: white;
 
 }
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -17,8 +16,11 @@
   clip: rect(0,0,0,0);
   border: 0;
 }
+
 .login-container{
   display: flex;
+  align-content: center;
+  height:11rem;
   justify-content: center;
 }
 
@@ -28,7 +30,7 @@
   justify-content: center;
   }
 }
-/* @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .App {
       display: flex;
       align-items:flex-start;
@@ -48,4 +50,4 @@
 
 
 }
-     */
+    
