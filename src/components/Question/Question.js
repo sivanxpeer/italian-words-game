@@ -1,7 +1,13 @@
 import React from "react";
 import "./Question.css";
+// import CountDown from "../../assets/Audio/5sec.mp3";
+import Correct from "../../assets/Audio/correct.mp3"
+import Buzzer from "../../assets/Audio/buzzer.mp3"
 
 const Question = ({ qArr, indexOfCurQ, indexLogic, numOfRightQ }) => {
+
+    // const [audioPlayer, setAudioPlayer] = useState(new Audio(CountDown));
+
     const shuffleArray = (originalArray) => {
         const array = [...originalArray];
         for (let i = array.length - 1; i > 0; i--) {
@@ -12,12 +18,27 @@ const Question = ({ qArr, indexOfCurQ, indexLogic, numOfRightQ }) => {
         }
         return array;
     };
+
     const onUserSelect = (e) => {
         console.log(e.target.id);
         if (e.target.id === "correct-word") {
-            numOfRightQ();
+            const audio = new Audio();
+            audio.src = Correct;
+            audio.play();
+            setTimeout(() => {
+                numOfRightQ();
+                indexLogic();
+
+            }, 2000)
         }
-        indexLogic();
+        else{
+            const audio = new Audio();
+            audio.src = Buzzer;
+            audio.play();
+            setTimeout(() => {
+                indexLogic();
+            }, 2500)
+        }
     };
 
     const inesrtAnswers = () => {
@@ -62,7 +83,7 @@ const Question = ({ qArr, indexOfCurQ, indexLogic, numOfRightQ }) => {
         <><div className="container-q">
             <div className="q-title">Choose Your Answer</div>
             <div className="question">
-                <div className="q-score">{`${indexOfCurQ + 1} / 10`}</div> 
+                <div className="q-score">{`${indexOfCurQ + 1} / 10`}</div>
                 <div className="q-content">
                     <h2 className="q-header">{qArr.italian}</h2>
                     <div className="q-options"> {inesrtAnswers()}</div>
