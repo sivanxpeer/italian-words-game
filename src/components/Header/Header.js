@@ -14,7 +14,7 @@ const Header = ({ myUser }) => {
             setbtn(true);
         }
         else if (myUser && btn) {
-            setbtn(prevState => !prevState);
+            setbtn(false);
         }
     }
 
