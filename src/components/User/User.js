@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import { Container } from '@mui/material';
-
 import './User.css'
 
 const User = ({userName}) => {

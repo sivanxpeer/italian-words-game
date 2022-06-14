@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react";
 import "./GameCard.css";
 import api from "../../Api";
 import GameList from "../GameList/GameList";
+import Header from "../Header/Header";
 const categories = ["Basics", "Family", "kitchen", "Emotions"];
-const GameCard = ({ scores, setScores }) => {
+
+const GameCard = ({ scores, setScores, myUser }) => {
     const [data, setData] = useState();
     const [category, setCategory] = useState(null); //return to null as initial
     const [doneCategory, setDoneCategory] = useState([]);
     const [isPlaying, setIsPlaying] = useState(true);
+
     useEffect(() => {
         let it = [];
         const fetchData = async () => {
@@ -26,7 +29,7 @@ const GameCard = ({ scores, setScores }) => {
             </div>
         );
     };
-    
+
     const insertCategoryButtons = () => {
         return categories.map((category) => {
             const isDone = doneCategory.includes(category.toLocaleLowerCase());
@@ -34,7 +37,7 @@ const GameCard = ({ scores, setScores }) => {
             console.log(category);
             return (
                 <div key={category}
-                    onClick={(e) => {!isDone && setCategory(e.target.textContent.toLowerCase());}}
+                    onClick={(e) => { !isDone && setCategory(e.target.textContent.toLowerCase()); }}
                     className={`category btn ${isDone && 'not-active-button'}`}>
                     {category}
                 </div>
@@ -44,21 +47,28 @@ const GameCard = ({ scores, setScores }) => {
 
     return (
         <div>
-            {isPlaying && category && data && (
-                <GameList className={"game-list"}
-                    questionArr={data}
-                    category={category}
-                    setDoneCategory={setDoneCategory}
-                    isPlaying={isPlaying}
-                    setIsPlaying={setIsPlaying}
-                    setScores={setScores}
-                    setCategory={setCategory}
-                />
-            )}
-            {isPlaying && !category && (
-                <div className="categories">{insertCategoryButtons()}</div>
-            )}
-            {!isPlaying && gameEnd()}
+            {myUser ?<>
+                {isPlaying && category && data && (
+                    <GameList className={"game-list"}
+                        questionArr={data}
+                        category={category}
+                        setDoneCategory={setDoneCategory}
+                        isPlaying={isPlaying}
+                        setIsPlaying={setIsPlaying}
+                        setScores={setScores}
+                        setCategory={setCategory}
+                    />
+                )}
+                {isPlaying && !category && (
+                    <div className="categories">{insertCategoryButtons()}</div>
+                )}
+                {!isPlaying && gameEnd()}
+            </>
+            :
+            <>
+                <Header></Header>
+            </>
+            }
         </div>
     );
 };

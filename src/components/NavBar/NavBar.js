@@ -1,31 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
-
 import "./NavBar.css";
-// import GameCard from "../GameCard/GameCard";
+
+
+//TODO - redirect to homepage after logout
+//TODO - after refreshing on categories page - keep disabled buttons disabled. 
 
 const NavBar = ({ setMyUser, myUser }) => {
+
     const responseGoogle = (response) => {
-        console.log(response);
-        console.log(response.profileObj.givenName);
-        setMyUser(response.profileObj);
-        // return (<GameCard/>)
-    };
-    const responseGoogle2 = (response) => {
         // console.log(response);
-        console.log(response.profileObj.name);
-        // console.log("check  ", response.profileObj.name);
+        // console.log(response.profileObj.givenName);
+        setMyUser(response.profileObj);
+    };
+
+    const responseGoogle2 = (response) => {
+        // console.log(response.profileObj.name);
         return response.profileObj.name;
     };
 
     const onLogOutSuccess = () => {
-        console.log("Signed out successfully");
+        // console.log("Signed out successfully");
         setMyUser(null);
     };
+
     const onFailure = function (error) {
         console.log(error);
     };
+
     return (
         <nav
             id="navbar-container"
@@ -35,7 +38,6 @@ const NavBar = ({ setMyUser, myUser }) => {
             <Link to="/" className="globus">
                 🌏 <span className="link bi">BiLinguale</span>
             </Link>
-            {/* <Link to="/" className="link bi">BiLinguale</Link> */}
             {myUser ? (
                 <>
                     <Link to="/gamecard" className="link learn">
@@ -44,9 +46,9 @@ const NavBar = ({ setMyUser, myUser }) => {
                     <Link to="/user" className="link user">
                         User Profile
                     </Link>
-                    <GoogleLogout 
+                    <GoogleLogout
                         render={(renderProps) => (
-                            <button 
+                            <button
                                 className="nav-signout link"
                                 onClick={renderProps.onClick}
                                 disabled={renderProps.disabled}
@@ -73,7 +75,7 @@ const NavBar = ({ setMyUser, myUser }) => {
                 ></GoogleLogin>
             )}
         </nav>
-        
+
     );
 };
 

@@ -11,7 +11,7 @@ import NotFound from "./components/NotFound";
 function App() {
   const [scores, setScores] = useState()
   const [myUser, setMyUser] = useState(null);
-  
+
   return (
     <div className="App" >
       <BrowserRouter>
@@ -20,7 +20,7 @@ function App() {
           <Route path="/" exact component={Header} myUser={myUser} >
           </Route>
           <Route path="/gamecard" exact >
-            <GameCard setScores={setScores} scores={scores} />
+            <GameCard setScores={setScores} scores={scores} myUser={myUser}/>
           </Route>
           <Route path="/user" exact component={User} />
           <Route component={NotFound} />

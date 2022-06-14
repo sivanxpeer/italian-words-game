@@ -62,7 +62,7 @@ const Question = ({ qArr, indexOfCurQ, indexLogic, numOfRightQ }) => {
         <><div className="container-q">
             <div className="q-title">Choose Your Answer</div>
             <div className="question">
-                <div className="q-score">{`${indexOfCurQ + 1} / 10`}</div>
+                <div className="q-score">{`${indexOfCurQ + 1} / 10`}</div> 
                 <div className="q-content">
                     <h2 className="q-header">{qArr.italian}</h2>
                     <div className="q-options"> {inesrtAnswers()}</div>
