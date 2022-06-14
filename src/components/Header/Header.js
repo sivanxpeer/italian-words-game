@@ -9,9 +9,9 @@ const Header = ({ myUser }) => {
     const start = () => {
         console.log("start");
         if (!myUser && !btn) {
-            history.push('/gamecard');
-            disp();
             setbtn(true);
+            disp();
+            history.push('/gamecard');
         }
         else if (myUser && btn) {
             setbtn(false);
