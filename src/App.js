@@ -15,9 +15,9 @@ function App() {
   return (
     <div className="App" >
       <BrowserRouter>
-        <NavBar setMyUser={setMyUser} myUser={myUser} />
+        <NavBar setMyUser={setMyUser} myUser={myUser}/>
         <Switch>
-          <Route path="/" exact component={Header} myUser={myUser} >
+          <Route path="/" exact component={Header} myUser={myUser}>
           </Route>
           <Route path="/gamecard" exact >
             <GameCard setScores={setScores} scores={scores} myUser={myUser}/>
