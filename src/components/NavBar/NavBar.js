@@ -5,23 +5,19 @@ import "./NavBar.css";
 
 
 //TODO - redirect to homepage after logout
-//TODO - after refreshing on categories page - keep disabled buttons disabled. 
+//TODO - remember user last score and display his name when login again 
 
 const NavBar = ({ setMyUser, myUser }) => {
 
     const responseGoogle = (response) => {
-        // console.log(response);
-        // console.log(response.profileObj.givenName);
         setMyUser(response.profileObj);
     };
 
     const responseGoogle2 = (response) => {
-        // console.log(response.profileObj.name);
         return response.profileObj.name;
     };
 
     const onLogOutSuccess = () => {
-        // console.log("Signed out successfully");
         setMyUser(null);
     };
 

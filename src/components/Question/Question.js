@@ -1,12 +1,9 @@
 import React from "react";
 import "./Question.css";
-// import CountDown from "../../assets/Audio/5sec.mp3";
 import Correct from "../../assets/Audio/correct.mp3"
-// import Buzzer from "../../assets/Audio/buzzer.mp3"
 import Buzzer2 from "../../assets/Audio/buzzer2.mp3"
 
 const Question = ({ qArr, indexOfCurQ, indexLogic, numOfRightQ }) => {
-    // const [audioPlayer, setAudioPlayer] = useState(new Audio(CountDown));
 
     const shuffleArray = (originalArray) => {
         const array = [...originalArray];
