@@ -30,7 +30,7 @@ const Header = ({ myUser  }) => {
             <span className="title">BiLinguale <span className="glob">🌏</span></span>
             <button className="btn start" onClick={start}><h3> Start!</h3></button>
             <div>
-                {controlDisp&&disp()}
+                {controlDisp&& disp()}
             </div>
         </div>
     )

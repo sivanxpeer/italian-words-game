@@ -16,20 +16,25 @@
   align-items: center;
   align-content: center;
 }
-.categories {
-  padding: 12em;
+.select-category {
   display: flex;
-  justify-content: space-around;
-  align-content: center;
-  /* margin: auto; */
-  /* align-items:space-around; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5em 0 0 0;
+  font-size: 2rem;
+}
+.categories {
+  padding: 8em 12em 12em 12em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .category {
   color: black;
-  margin-left: 1em;
+  margin: 2em;
   padding: 1em;
-  /* background-color:#d9dd6b; */
 }
 
 .game-list {
@@ -57,7 +62,6 @@
   .categories {
     display: flex;
     flex-direction: column;
-    /* padding: 4em; */
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -69,6 +73,5 @@
   .end-round-title {
     width: 99%;
     margin: auto;
-    /* margin-left:3em; */
   }
 }

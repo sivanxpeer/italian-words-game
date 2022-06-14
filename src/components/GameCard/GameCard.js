@@ -24,7 +24,7 @@ const GameCard = ({ scores, setScores, myUser }) => {
     const gameEnd = () => {
         return (
             <div className="end-round">
-                <h1 className="end-round-title"> {`Round finished with the score of ${scores + 1}/10`}</h1>
+                <h1 className="end-round-title"> {`Round finished with the score of ${scores}/10`}</h1>
                 <button className="btn" onClick={() => setIsPlaying(true)}>Play Again</button>
             </div>
         );
@@ -47,7 +47,7 @@ const GameCard = ({ scores, setScores, myUser }) => {
 
     return (
         <div>
-            {myUser ?<>
+            {myUser ? <>
                 {isPlaying && category && data && (
                     <GameList className={"game-list"}
                         questionArr={data}
@@ -60,14 +60,23 @@ const GameCard = ({ scores, setScores, myUser }) => {
                     />
                 )}
                 {isPlaying && !category && (
-                    <div className="categories">{insertCategoryButtons()}</div>
+                    <div>
+                        <div className="select-category">
+                            <h3>
+                                Select a Category
+                            </h3>
+                        </div>
+                        <div className="categories">
+                            {insertCategoryButtons()}
+                        </div>
+                    </div>
                 )}
                 {!isPlaying && gameEnd()}
             </>
-            :
-            <>
-                <Header></Header>
-            </>
+                :
+                <>
+                    <Header></Header>
+                </>
             }
         </div>
     );

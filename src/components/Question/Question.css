@@ -4,24 +4,27 @@ body{
 
 }
 .question {
+  
     display: flex;
     flex-direction: column;
     gap: 2rem;
     height: 100%;
+    width: 80%;
     text-align: center;
     border: 3px solid #d9dd6ba8;
     justify-content: space-between;
     padding: 5rem;
-    margin:2rem 5rem
+    margin:2rem 5rem;
   }
   
   .q {
     display: flex;
-  
-    border: 1px solid #d9dd6b;
+    width:50%;
+    /* border: 1px solid #d9dd6b; */
     /* height: 400px; */
     align-content: center;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
+    margin: 1em auto;
     border-radius: 1em;
   }
   .q-score {
@@ -30,6 +33,7 @@ body{
   }
   .q-content {
   }
+  
   .q-header {
     font-size: 3rem;
     padding-bottom: 0.8rem;
