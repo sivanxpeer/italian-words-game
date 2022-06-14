@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState,useEffect,useRef } from "react";
 import "./Question.css";
 import Correct from "../../assets/Audio/correct.mp3"
 import Buzzer2 from "../../assets/Audio/buzzer2.mp3"
 
 const Question = ({ qArr, indexOfCurQ, indexLogic, numOfRightQ }) => {
+    const voiceRef = useRef(window.speechSynthesis)
+    const [italianVoice,setItalianVoice] =useState([]);
+
+    useEffect(() => {
+        setTimeout(()=>{
+            console.log(voiceRef)
+            console.log(qArr.italian)
+            readWord(qArr.italian)
+            const voices = voiceRef.current.getVoices();
+            console.log(voices)
+            const itVoices = voices.filter((voice)=>{
+                return voice.lang==="it-IT";
+            })
+            console.log(itVoices)
+            setItalianVoice(itVoices[0])
+        },200)
+    }, [qArr])
+
+    const readWord = (italianWord) => {
+        const utter = new SpeechSynthesisUtterance(italianWord)
+        utter.voice = italianVoice
+        voiceRef.current.speak(utter);
+    }
 
     const shuffleArray = (originalArray) => {
         const array = [...originalArray];
@@ -28,7 +51,7 @@ const Question = ({ qArr, indexOfCurQ, indexLogic, numOfRightQ }) => {
 
             }, 2000)
         }
-        else{
+        else {
             const audio = new Audio();
             audio.src = Buzzer2;
             audio.play();
