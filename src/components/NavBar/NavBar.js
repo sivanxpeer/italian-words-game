@@ -3,17 +3,19 @@ import { Link } from "react-router-dom";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 
 import "./NavBar.css";
+// import GameCard from "../GameCard/GameCard";
 
 const NavBar = ({ setMyUser, myUser }) => {
     const responseGoogle = (response) => {
         console.log(response);
         console.log(response.profileObj.givenName);
         setMyUser(response.profileObj);
+        // return (<GameCard/>)
     };
     const responseGoogle2 = (response) => {
         // console.log(response);
         console.log(response.profileObj.name);
-        console.log("check for Ilya ", response.profileObj.name);
+        // console.log("check  ", response.profileObj.name);
         return response.profileObj.name;
     };
 
@@ -71,6 +73,7 @@ const NavBar = ({ setMyUser, myUser }) => {
                 ></GoogleLogin>
             )}
         </nav>
+        
     );
 };
 

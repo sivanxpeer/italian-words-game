@@ -48,30 +48,29 @@ body{
 }
 
 .login{
-    opacity: 0.4;
+    /* opacity: 0.4; */
     margin:0.8rem 1rem 0 0;
 }
 .nav-signout {
-    /* color: rgb(0, 0, 0); */
-    /* color: white; */
-    background-color: transparent;
-    /* z-index: 1;/ */
-   
-     /* */
-    /* background:(0% 0% 0%/0.5); */
+    /* 
     font-size: 1rem;
-    align-self: center;
     border: none;
     color: white;
     padding: 1rem;
     flex:0.4;
     font-weight: 100;
-
-}
-.nav-signout:hover{
+    */
+    /* align-self: center; */
+    background-color: transparent;
+    font-size: large;
+    padding: 2%;
+    text-decoration: none;
+    color:white;
+    opacity:0.7;
     cursor: pointer;
-
+    border:none;
 }
+
 .container-q{
     margin:auto;
     display: flex;

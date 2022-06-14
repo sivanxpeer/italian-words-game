@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./GameCard.css";
 import api from "../../Api";
 import GameList from "../GameList/GameList";
-const cat = ["Basics", "Family", "kitchen", "Emotions"];
+const categories = ["Basics", "Family", "kitchen", "Emotions"];
 const GameCard = ({ scores, setScores }) => {
     const [data, setData] = useState();
     const [category, setCategory] = useState(null); //return to null as initial
@@ -17,34 +17,31 @@ const GameCard = ({ scores, setScores }) => {
         };
         fetchData();
     }, []);
+
     const gameEnd = () => {
         return (
             <div className="end-round">
-                <h1 className="end-round-title"> {`Wooohooo round finished with the score of ${scores + 1}/10`}</h1>
-                <button className="btn"onClick={() => setIsPlaying(true)}>Play Again</button>
+                <h1 className="end-round-title"> {`Round finished with the score of ${scores + 1}/10`}</h1>
+                <button className="btn" onClick={() => setIsPlaying(true)}>Play Again</button>
             </div>
         );
     };
-    const insertCatButtons = () => {
-        return cat.map((c) => {
-            const isDone = doneCategory.includes(c.toLocaleLowerCase());
+    
+    const insertCategoryButtons = () => {
+        return categories.map((category) => {
+            const isDone = doneCategory.includes(category.toLocaleLowerCase());
             console.log(doneCategory);
-            console.log(c);
+            console.log(category);
             return (
-                <div key={c}
-                    onClick={(e) => {
-                        !isDone && setCategory(e.target.textContent.toLowerCase());
-                    }}
-                    className={`category btn ${isDone&&'not-active-button'}`}
-                >
-                    {c}
+                <div key={category}
+                    onClick={(e) => {!isDone && setCategory(e.target.textContent.toLowerCase());}}
+                    className={`category btn ${isDone && 'not-active-button'}`}>
+                    {category}
                 </div>
             );
         });
     };
-    // game list get the props ↓
-    // qArr, category,  setDoneCategory
-    //1. create button for each category of Q + nice title + CSS
+
     return (
         <div>
             {isPlaying && category && data && (
@@ -59,7 +56,7 @@ const GameCard = ({ scores, setScores }) => {
                 />
             )}
             {isPlaying && !category && (
-                <div className="categories">{insertCatButtons()}</div>
+                <div className="categories">{insertCategoryButtons()}</div>
             )}
             {!isPlaying && gameEnd()}
         </div>
