@@ -5,13 +5,11 @@ import Buzzer2 from "../../assets/Audio/buzzer2.mp3"
 
 const Question = ({ qArr, indexOfCurQ, indexLogic, numOfRightQ }) => {
     const voiceRef = useRef(window.speechSynthesis)
-    const [italianVoice,setItalianVoice] =useState([]);
-
+    const [italianVoice,setItalianVoice] =useState();
     useEffect(() => {
         setTimeout(()=>{
             console.log(voiceRef)
             console.log(qArr.italian)
-            readWord(qArr.italian)
             const voices = voiceRef.current.getVoices();
             console.log(voices)
             const itVoices = voices.filter((voice)=>{
@@ -19,15 +17,29 @@ const Question = ({ qArr, indexOfCurQ, indexLogic, numOfRightQ }) => {
             })
             console.log(itVoices)
             setItalianVoice(itVoices[0])
+            // readWord(qArr.italian)
+            readWord(qArr.italian)
         },200)
-    }, [qArr])
 
+        }, [qArr,indexOfCurQ])//  eslint-disable-line react-hooks/exhaustive-deps
     const readWord = (italianWord) => {
         const utter = new SpeechSynthesisUtterance(italianWord)
         utter.voice = italianVoice
         voiceRef.current.speak(utter);
     }
 
+    
+        
+    //     useEffect(()=>{
+            
+    //         readWord(qArr.italian)
+            
+    // },[qArr,readWord])
+
+    // useCallback(()=>{
+        
+    // },[qArr])//  eslint-disable-line react-hooks/exhaustive-deps
+    
     const shuffleArray = (originalArray) => {
         const array = [...originalArray];
         for (let i = array.length - 1; i > 0; i--) {
