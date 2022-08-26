@@ -1,4 +1,3 @@
-### mid-project 
 
 #### learn basic italian
 
